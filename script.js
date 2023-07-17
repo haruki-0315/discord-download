@@ -3,7 +3,9 @@ function handleLogin(event) {
     
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
-  
+
+const secretKey = "discord_download_login";
+    
     // JSONデータの読み込み（サーバー上にjsonファイルを配置してください）
     fetch("users.json")
       .then(response => response.json())
@@ -12,6 +14,7 @@ function handleLogin(event) {
         for (var i = 0; i < data.length; i++) {
           if (data[i].username === username && data[i].password === password) {
             found = true;
+              req.session.secretKey = secretKey;
             break;
           }
         }
@@ -25,18 +28,12 @@ function handleLogin(event) {
       .catch(error => console.log(error));
   }
 
-const cookieSession = require('cookie-session');
-const express = require('express');
-const app = express();
+app.get("download.html", (req,res) => {
+    const sessionKey = req.session.secretKey;
+    if (sessionKey === secretKey) {
+        res.send("アクセスが許可されました");
 
-app.use(cookieSession({
-  name: 'session',
-  keys: ['discord_download_login'], // 秘密のキーを設定してください
-  maxAge: 24 * 60 * 60 * 1000 // セッションの有効期限（例では24時間）を設定してください
-}));
-
-// ここから先のルートハンドラーやミドルウェアでセッションを使用できます
-
-app.listen(3000, () => {
-  console.log('サーバーがポート3000で起動しました');
+    } else {
+        res.redirect("index.html");
+    }
 });
