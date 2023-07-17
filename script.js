@@ -31,7 +31,7 @@ const app = express();
 
 app.use(cookieSession({
   name: 'session',
-  keys: ['your_secret_keys'], // 秘密のキーを設定してください
+  keys: ['discord_download_login'], // 秘密のキーを設定してください
   maxAge: 24 * 60 * 60 * 1000 // セッションの有効期限（例では24時間）を設定してください
 }));
 
