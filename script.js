@@ -24,3 +24,19 @@ function handleLogin(event) {
       })
       .catch(error => console.log(error));
   }
+
+const cookieSession = require('cookie-session');
+const express = require('express');
+const app = express();
+
+app.use(cookieSession({
+  name: 'session',
+  keys: ['your_secret_keys'], // 秘密のキーを設定してください
+  maxAge: 24 * 60 * 60 * 1000 // セッションの有効期限（例では24時間）を設定してください
+}));
+
+// ここから先のルートハンドラーやミドルウェアでセッションを使用できます
+
+app.listen(3000, () => {
+  console.log('サーバーがポート3000で起動しました');
+});
