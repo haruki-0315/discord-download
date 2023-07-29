@@ -22,7 +22,7 @@ body {
         width: 300px;
       }
 
-      .login-form button {
+      .login-button {
         background-color: #ff9900;
         color: #ffffff;
         border: none;
@@ -31,6 +31,6 @@ body {
         cursor: pointer;
       }
 
-      .login-form button:hover {
+      .login-button:hover {
         background-color: #ffad33;
       }
