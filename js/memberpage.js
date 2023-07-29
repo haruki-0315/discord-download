@@ -7,3 +7,10 @@ if (sessionStorage.getItem("secretKey") !== "discord_member_login") {
   // 特定のページへのアクセスを許可する処理
   console.log("アクセスが許可されました");
 }
+
+window.onload = function() {
+  var counterElement = document.getElementById("counter");
+  var count = parseInt(counterElement.innerHTML);
+  count++;
+  counterElement.innerHTML = count;
+};
