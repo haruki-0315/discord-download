@@ -13,6 +13,21 @@ function handleLogout() {
   window.location.href = "memberlogin.html"; // ログインページにリダイレクト
 }
 
+var today = new Date();
+   var calendarElement = document.getElementById("calendar");
+   calendarElement.innerHTML = today.toDateString();
+
+var scheduleData = [
+     { date: "2023-07-29", event: "Meeting with clients" },
+     { date: "2023-07-30", event: "Team outing" }
+   ];
+   
+   for (var i = 0; i < scheduleData.length; i++) {
+     var schedule = scheduleData[i];
+     var dateElement = document.getElementById(schedule.date);
+     dateElement.innerHTML += "<br>" + schedule.event;
+   }
+
 window.onload = function() {
   var counterElement = document.getElementById("counter");
   var count = parseInt(counterElement.innerHTML);
