@@ -13,7 +13,7 @@ function handleLogout() {
   window.location.href = "memberlogin.html"; // ログインページにリダイレクト
 }
 
-var today = new Date();
+var today = new Date("2023-07-29");
    var calendarElement = document.getElementById("calendar");
    calendarElement.innerHTML = today.toDateString();
 
