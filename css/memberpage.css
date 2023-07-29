@@ -1,3 +1,21 @@
+#calendar {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+#calendar div {
+  margin-bottom: 10px;
+}
+
+#calendar .date {
+  font-weight: bold;
+}
+
+#calendar .event {
+  color: #666;
+}
+
 h2 {
     color: gray;
 }
