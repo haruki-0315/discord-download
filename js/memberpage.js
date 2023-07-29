@@ -8,6 +8,11 @@ if (sessionStorage.getItem("secretKey") !== "discord_member_login") {
   console.log("アクセスが許可されました");
 }
 
+function handleLogout() {
+  sessionStorage.removeItem("secretKey");
+  window.location.href = "memberlogin.html"; // ログインページにリダイレクト
+}
+
 window.onload = function() {
   var counterElement = document.getElementById("counter");
   var count = parseInt(counterElement.innerHTML);
