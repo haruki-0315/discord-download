@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // ここでフォームのデータを処理するためのコードを追加します
   
   // 例として、フォームのデータをメールで送信するコードを追加します
-  $to = "your-email@example.com"; // 宛先メールアドレスを指定します
+  $to = "discord-download-form@outlook.jp"; // 宛先メールアドレスを指定します
   $subject = "お問い合わせフォームからのメッセージ";
   $body = "お名前: $name\nメールアドレス: $email\nメッセージ: $message";
 
