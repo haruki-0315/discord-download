@@ -1,0 +1,26 @@
+body {
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    text-align: center;
+}
+
+.memberlogin {
+    background-color: #ff9900;
+    color: #ffffff;
+    border: none;
+    padding: 30px 90px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 150px;
+}
+
+.moderatorlogin {
+    background-color: #ff9900;
+    color: #ffffff;
+    border: none;
+    padding: 30px 90px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 75px;
+}
