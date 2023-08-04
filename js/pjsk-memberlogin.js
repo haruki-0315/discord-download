@@ -5,7 +5,7 @@ function handleLogin(event) {
     var password = document.getElementById("password").value;
     
     // JSONデータの読み込み（サーバー上にjsonファイルを配置してください）
-    fetch("json/users.json")
+    fetch("json/pjsk-users.json")
       .then(response => response.json())
       .then(data => {
         var found = false;
