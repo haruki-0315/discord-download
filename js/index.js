@@ -1,5 +1,5 @@
 function memberlogin() {
-    window.location.href = "memberlogin.html";
+    window.location.href = "pjsk-memberlogin.html";
 }
 
 function moderatorlogin() {
