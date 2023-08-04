@@ -18,7 +18,7 @@ function handleLogin(event) {
         }
 
         if (found) {
-          window.location.href = "memberpage.html"; // ダウンロードページにリダイレクト
+          window.location.href = "pjsk-memberpage.html"; // ダウンロードページにリダイレクト
         } else {
           document.getElementById("loginError").innerText = "ユーザー名もしくはパスワードが違います。";
           document.getElementById("loginError").style.display = "block";
